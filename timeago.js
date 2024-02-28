@@ -1,13 +1,3 @@
-some tweak for timeago function to support timestamp offset with datetime format
-
-it is support US- Europ GB- Europe Germany
-
-
-
-if the time is greater than 7 days then present the actual date, otherwise will break it to time slot
-
-
-
 function timeAgo(timestampWithOffset, format = "default", locale = "en-US") {
     const currentDate = new Date();
     const inputDate = new Date(timestampWithOffset);
@@ -48,10 +38,3 @@ function timeAgo(timestampWithOffset, format = "default", locale = "en-US") {
         return "Unsupported format";
     }
 }
-
-
-
-// Examples usage with timestamp offset
-const timestampWithOffset = "2024-02-28T12:00:00+03:00";
-console.log(timeAgo(timestampWithOffset, "default", "en-US")); // Output using US date format
-console.log(timeAgo(timestampWithOffset, "default", "de-DE")); // Output using German time format
