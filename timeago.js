@@ -1,17 +1,11 @@
 function timeAgo(timestampWithOffset, format = "default", locale = "en-US") {
     const currentDate = new Date();
     const inputDate = new Date(timestampWithOffset);
-
-
-
     const timeDifference = currentDate - inputDate;
     const seconds = Math.floor(timeDifference / 1000);
     const minutes = Math.floor(seconds / 60);
     const hours = Math.floor(minutes / 60);
     const days = Math.floor(hours / 24);
-
-
-
     if (days > 7) {
         return inputDate.toLocaleString(locale, { dateStyle: "medium", timeStyle: "short" });
     } else if (format === "default") {
