@@ -1,5 +1,12 @@
 # TimeAgo
-A simple Time Ago function that support a different localization
+A simple Time Ago function that supports a different localization
+
+
+if the time is greater than 7 days then present the actual date, otherwise will break it into time slots
+
+
+
+
 
 
 #  How to use
